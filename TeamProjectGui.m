@@ -1,4 +1,5 @@
 % Jake Hemmerle
+% about page
 
 function varargout = TeamProjectGui(varargin)
 % TEAMPROJECTGUI MATLAB code for TeamProjectGui.fig
