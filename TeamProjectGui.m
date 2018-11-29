@@ -1,3 +1,5 @@
+% Jake Hemmerle
+
 function varargout = TeamProjectGui(varargin)
 % TEAMPROJECTGUI MATLAB code for TeamProjectGui.fig
 %      TEAMPROJECTGUI, by itself, creates a new TEAMPROJECTGUI or raises the existing
