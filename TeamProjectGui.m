@@ -196,15 +196,16 @@ function checkbox4_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox4
-f = get(handles.edit1,'String');
+f = str2sym(get(handles.edit1,'String'));
 choice = get(handles.popupmenu3,'Value');  
 switch choice
 	case 1   % User Picked First Item on Menu
-        syms x
-        double_der = diff(diff(f));
+        der = diff(f,'x');
+        doub_der = diff(diff(f,'x'));
+        doub_der = char(doub_der);
         v = get(handles.checkbox4,'Value');
             if v == 1
-                set(handles.text11, 'String', 5);
+                set(handles.text11, 'String', doub_der);
             else
                 set(handles.text11, 'String', '');
             end
