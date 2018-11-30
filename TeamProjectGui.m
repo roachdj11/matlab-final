@@ -183,9 +183,9 @@ switch choice
         
 		v = get(handles.checkbox3,'Value');
             if v == 1
-            set(handles.text11, 'String', 5);
+            set(handles.text10, 'String', 5);
             else
-            set(handles.text11, 'String', '');
+            set(handles.text10, 'String', '');
             end
 end
 
