@@ -86,7 +86,7 @@ function edit1_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of edit1 as text
 %        str2double(get(hObject,'String')) returns contents of edit1 as a double
-
+ 
 
 % --- Executes during object creation, after setting all properties.
 function edit1_CreateFcn(hObject, eventdata, handles)
@@ -167,7 +167,27 @@ function checkbox3_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox3
-
+f = get(handles.edit1,'String');
+choice = get(handles.popupmenu3,'Value');  
+switch choice
+	case 1   % User Picked First Item on Menu
+        syms x
+        der = diff(f);
+        v = get(handles.checkbox3,'Value');
+            if v == 1
+                set(handles.text10, 'String', der);
+            else
+                set(handles.text10, 'String', '');
+            end
+	case 2	% User Picked 2nd Item on Menu
+        
+		v = get(handles.checkbox3,'Value');
+            if v == 1
+            set(handles.text11, 'String', 5);
+            else
+            set(handles.text11, 'String', '');
+            end
+end
 
 % --- Executes on button press in checkbox4.
 function checkbox4_Callback(hObject, eventdata, handles)
@@ -176,7 +196,27 @@ function checkbox4_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox4
-
+f = get(handles.edit1,'String');
+choice = get(handles.popupmenu3,'Value');  
+switch choice
+	case 1   % User Picked First Item on Menu
+        syms x
+        double_der = diff(diff(f));
+        v = get(handles.checkbox4,'Value');
+            if v == 1
+                set(handles.text11, 'String', 5);
+            else
+                set(handles.text11, 'String', '');
+            end
+	case 2	% User Picked 2nd Item on Menu
+        
+		v = get(handles.checkbox4,'Value');
+            if v == 1
+            set(handles.text11, 'String', 5);
+            else
+            set(handles.text11, 'String', '');
+            end
+end
 
 
 function edit3_Callback(hObject, eventdata, handles)
