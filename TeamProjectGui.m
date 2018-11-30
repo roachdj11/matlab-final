@@ -27,7 +27,7 @@ function varargout = TeamProjectGui(varargin)
 
 % Edit the above text to modify the response to help TeamProjectGui
 
-% Last Modified by GUIDE v2.5 30-Nov-2018 14:19:37
+% Last Modified by GUIDE v2.5 29-Nov-2018 14:26:29
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -282,7 +282,6 @@ function edit4_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
 
 
 function edit5_Callback(hObject, eventdata, handles)
