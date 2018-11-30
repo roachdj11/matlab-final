@@ -209,7 +209,17 @@ function popupmenu3_Callback(hObject, eventdata, handles)
 
 % Hints: contents = cellstr(get(hObject,'String')) returns popupmenu3 contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from popupmenu3
-
+choice = get(handles.popupmenu3,'Value');  
+switch choice
+	case 1   % User Picked First Item on Menu
+		set(handles.edit1,'String','')
+        set(handles.edit3,'String','')
+        set(handles.edit4, 'String', '');
+	case 2	% User Picked 2nd Item on Menu
+		set(handles.edit1,'String','')
+        set(handles.edit3,'String','')
+        set(handles.edit4, 'String', '');
+end 
 
 % --- Executes during object creation, after setting all properties.
 function popupmenu3_CreateFcn(hObject, eventdata, handles)
