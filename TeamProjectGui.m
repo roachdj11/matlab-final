@@ -309,7 +309,30 @@ function checkbox5_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox5
-
+f = str2sym(get(handles.edit1,'String'));
+choice = get(handles.popupmenu3,'Value');  
+switch choice
+	case 1   % User Picked First Item on Menu
+        der = diff(f,'x');
+        v = get(handles.checkbox5,'Value');
+            if v == 1
+                axes(handles.axes2);
+                fplot(der);
+            else
+                axes(handles.axes2);
+                cla;       
+            end
+	case 2	% User Picked 2nd Item on Menu
+        integral = int(f,'x');       
+		v = get(handles.checkbox5,'Value');
+            if v == 1
+                axes(handles.axes2);
+                fplot(integral);
+            else
+                axes(handles.axes2);
+                cla;       
+            end
+end
 
 % --- Executes on button press in checkbox6.
 function checkbox6_Callback(hObject, eventdata, handles)
