@@ -27,7 +27,7 @@ function varargout = TeamProjectGui(varargin)
 
 % Edit the above text to modify the response to help TeamProjectGui
 
-% Last Modified by GUIDE v2.5 30-Nov-2018 17:55:52
+% Last Modified by GUIDE v2.5 03-Dec-2018 16:59:02
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -181,9 +181,11 @@ switch choice
                 set(handles.text10, 'String', '');
             end
 	case 2	% User Picked 2nd Item on Menu
+        integral = int(f, 'x');
+        integral = char(integral);
 		v = get(handles.checkbox3,'Value');
             if v == 1
-            set(handles.text10, 'String', 5);
+            set(handles.text10, 'String', integral);
             else
             set(handles.text10, 'String', '');
             end
