@@ -375,3 +375,16 @@ function pushbutton3_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton3 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+set(handles.edit1, 'String', '');
+set(handles.edit3, 'String', '');
+set(handles.edit4, 'String', '');
+set(handles.text10, 'String', '');
+set(handles.text11, 'String', '');
+set(handles.checkbox3, 'Value', 0);
+set(handles.checkbox4, 'Value', 0);
+set(handles.checkbox5, 'Value', 0);
+set(handles.checkbox6, 'Value', 0);
+set(handles.checkbox7, 'Value', 0);
+axes(handles.axes1); cla;
+axes(handles.axes2); cla;
+axes(handles.axes3); cla;
