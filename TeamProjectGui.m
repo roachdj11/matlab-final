@@ -168,7 +168,6 @@ function checkbox3_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox3
 f = str2sym(get(handles.edit1,'String'));
-%f1 = double(subs(f,x));
 choice = get(handles.popupmenu3,'Value');  
 switch choice
 	case 1   % User Picked First Item on Menu
@@ -328,7 +327,15 @@ function checkbox7_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox7
-
+f = str2sym(get(handles.edit1,'String'));
+v = get(handles.checkbox7,'Value');
+if v == 1
+    axes(handles.axes1);
+    fplot(f);
+else
+    axes(handles.axes1);
+    cla; 
+end
 
 
 function edit4_Callback(hObject, eventdata, handles)
