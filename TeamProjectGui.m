@@ -202,7 +202,6 @@ f = str2sym(get(handles.edit1,'String'));
 choice = get(handles.popupmenu3,'Value');  
 switch choice
 	case 1   % User Picked First Item on Menu
-        der = diff(f,'x');
         doub_der = diff(diff(f,'x'));
         doub_der = char(doub_der);
         v = get(handles.checkbox4,'Value');
@@ -212,10 +211,11 @@ switch choice
                 set(handles.text11, 'String', '');
             end
 	case 2	% User Picked 2nd Item on Menu
-        
+        doub_integral = int(int(f,'x'));
+        doub_integral = char(doub_integral);       
 		v = get(handles.checkbox4,'Value');
             if v == 1
-            set(handles.text11, 'String', 5);
+            set(handles.text11, 'String', doub_integral);
             else
             set(handles.text11, 'String', '');
             end
