@@ -318,7 +318,30 @@ function checkbox6_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox6
-
+f = str2sym(get(handles.edit1,'String'));
+choice = get(handles.popupmenu3,'Value');  
+switch choice
+	case 1   % User Picked First Item on Menu
+        doub_der = diff(diff(f,'x'));
+        v = get(handles.checkbox6,'Value');
+            if v == 1
+                axes(handles.axes3);
+                fplot(doub_der);
+            else
+                axes(handles.axes3);
+                cla;       
+            end
+	case 2	% User Picked 2nd Item on Menu
+        doub_integral = int(int(f,'x'));       
+		v = get(handles.checkbox6,'Value');
+            if v == 1
+                axes(handles.axes3);
+                fplot(doub_integral);
+            else
+                axes(handles.axes3);
+                cla;       
+            end
+end
 
 % --- Executes on button press in checkbox7.
 function checkbox7_Callback(hObject, eventdata, handles)
