@@ -255,13 +255,39 @@ function popupmenu3_Callback(hObject, eventdata, handles)
 choice = get(handles.popupmenu3,'Value');  
 switch choice
 	case 1   % User Picked First Item on Menu
-		set(handles.edit1,'String','')
-        set(handles.edit3,'String','')
+        set(handles.text4, 'String', 'Function');
+        set(handles.text5, 'String', 'First Derivative');
+        set(handles.text6, 'String', 'Second Derivative');
+		set(handles.edit1, 'String', '');
+        set(handles.edit3, 'String', '');
         set(handles.edit4, 'String', '');
+        set(handles.text10, 'String', '');
+        set(handles.text11, 'String', '');
+        set(handles.checkbox3, 'Value', 0);
+        set(handles.checkbox4, 'Value', 0);
+        set(handles.checkbox5, 'Value', 0);
+        set(handles.checkbox6, 'Value', 0);
+        set(handles.checkbox7, 'Value', 0);
+        axes(handles.axes1); cla;
+        axes(handles.axes2); cla;
+        axes(handles.axes3); cla;
 	case 2	% User Picked 2nd Item on Menu
-		set(handles.edit1,'String','')
-        set(handles.edit3,'String','')
+        set(handles.text4, 'String', 'Function');
+        set(handles.text5, 'String', 'First Anti-Derivative');
+        set(handles.text6, 'String', 'Second Anti-Derivative');
+		set(handles.edit1, 'String', '');
+        set(handles.edit3, 'String', '');
         set(handles.edit4, 'String', '');
+        set(handles.text10, 'String', '');
+        set(handles.text11, 'String', '');
+        set(handles.checkbox3, 'Value', 0);
+        set(handles.checkbox4, 'Value', 0);
+        set(handles.checkbox5, 'Value', 0);
+        set(handles.checkbox6, 'Value', 0);
+        set(handles.checkbox7, 'Value', 0);
+        axes(handles.axes1); cla;
+        axes(handles.axes2); cla;
+        axes(handles.axes3); cla;
 end 
 
 % --- Executes during object creation, after setting all properties.
