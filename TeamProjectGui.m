@@ -257,6 +257,8 @@ switch choice
         set(handles.text4, 'String', 'Function');
         set(handles.text5, 'String', 'First Derivative');
         set(handles.text6, 'String', 'Second Derivative');
+        set(handles.text16, 'String', '');
+        set(handles.text17, 'String', '');
 		set(handles.edit1, 'String', '');
         set(handles.edit3, 'String', '');
         set(handles.edit4, 'String', '');
@@ -274,7 +276,9 @@ switch choice
         set(handles.text4, 'String', 'Function');
         set(handles.text5, 'String', 'First Anti-Derivative');
         set(handles.text6, 'String', 'Second Anti-Derivative');
-		set(handles.edit1, 'String', '');
+        set(handles.text16, 'String', '+ C');
+        set(handles.text17, 'String', '+ C');        
+        set(handles.edit1, 'String', '');
         set(handles.edit3, 'String', '');
         set(handles.edit4, 'String', '');
         set(handles.text10, 'String', '');
