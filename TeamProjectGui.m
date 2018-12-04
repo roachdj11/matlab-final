@@ -27,7 +27,7 @@ function varargout = TeamProjectGui(varargin)
 
 % Edit the above text to modify the response to help TeamProjectGui
 
-% Last Modified by GUIDE v2.5 03-Dec-2018 20:02:50
+% Last Modified by GUIDE v2.5 04-Dec-2018 16:20:08
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -294,8 +294,8 @@ switch choice
         set(handles.text4, 'String', 'Function');
         set(handles.text5, 'String', 'First Derivative');
         set(handles.text6, 'String', 'Second Derivative');
-        set(handles.text16, 'String', '');
-        set(handles.text17, 'String', '');
+        set(handles.text18, 'String', '');
+        set(handles.text19, 'String', '');
 		set(handles.edit1, 'String', '');
         set(handles.edit3, 'String', '');
         set(handles.edit4, 'String', '');
@@ -315,8 +315,8 @@ switch choice
         set(handles.text4, 'String', 'Function');
         set(handles.text5, 'String', 'First Anti-Derivative');
         set(handles.text6, 'String', 'Second Anti-Derivative');
-        set(handles.text16, 'String', '+ C');
-        set(handles.text17, 'String', '+ C');        
+        set(handles.text18, 'String', '+ C');
+        set(handles.text19, 'String', '+ C');        
         set(handles.edit1, 'String', '');
         set(handles.edit3, 'String', '');
         set(handles.edit4, 'String', '');
@@ -549,3 +549,26 @@ set(handles.checkbox7, 'Value', 0);
 axes(handles.axes1); cla;
 axes(handles.axes2); cla;
 axes(handles.axes3); cla;
+
+
+% --- Executes on selection change in listbox1.
+function listbox1_Callback(hObject, eventdata, handles)
+% hObject    handle to listbox1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns listbox1 contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from listbox1
+
+
+% --- Executes during object creation, after setting all properties.
+function listbox1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to listbox1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: listbox controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
