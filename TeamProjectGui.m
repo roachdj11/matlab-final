@@ -395,7 +395,34 @@ function edit4_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of edit4 as text
 %        str2double(get(hObject,'String')) returns contents of edit4 as a double
-
+f = str2sym(get(handles.edit1,'String'));
+choice = get(handles.popupmenu3,'Value');  
+switch choice
+	case 1   % User Picked First Item on Menu
+        der_answer = str2sym(get(handles.edit4,'String'));  
+        der = diff(f,'x');
+        syms x
+        x = 1:10;
+        guess = eval(der_answer);
+        actual = eval(der);
+            if guess == actual
+                set(hObject,'BackgroundColor','green');
+            else
+                set(hObject,'BackgroundColor','red');
+            end
+	case 2	% User Picked 2nd Item on Menu
+        integral_answer = str2sym(get(handles.edit4,'String'));  
+        integral = int(f,'x');
+        syms x
+        x = 1:10;
+        guess = eval(integral_answer);
+        actual = eval(integral);
+            if guess == actual
+                set(hObject,'BackgroundColor','green');
+            else
+                set(hObject,'BackgroundColor','red');
+            end
+end
 
 % --- Executes during object creation, after setting all properties.
 function edit4_CreateFcn(hObject, eventdata, handles)
