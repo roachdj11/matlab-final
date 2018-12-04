@@ -249,7 +249,7 @@ switch choice
             end
 	case 2	% User Picked 2nd Item on Menu
         doub_integral_answer = str2sym(get(handles.edit3,'String'));  
-        doub_integral = int(f,'x');
+        doub_integral = int(int(f,'x'));
         syms x
         x = 1:10;
         guess = eval(doub_integral_answer);
