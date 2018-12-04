@@ -228,7 +228,42 @@ function edit3_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of edit3 as text
 %        str2double(get(hObject,'String')) returns contents of edit3 as a double
-
+f = str2sym(get(handles.edit1,'String'));
+choice = get(handles.popupmenu3,'Value');  
+switch choice
+	case 1   % User Picked First Item on Menu
+        doub_der_answer = str2sym(get(handles.edit3,'String'));
+        doub_der = diff(diff(f,'x'));
+        syms x
+        x = 1:10;
+        guess = eval(doub_der_answer);
+        actual = eval(doub_der);
+            if guess == actual
+                set(hObject,'BackgroundColor','green');
+                [s,fs] = audioread('app.wav');
+                sound(s,fs)
+            else
+                set(hObject,'BackgroundColor','red');
+                [s,fs] = audioread('buzz.wav');
+                sound(s,fs)
+            end
+	case 2	% User Picked 2nd Item on Menu
+        doub_integral_answer = str2sym(get(handles.edit3,'String'));  
+        doub_integral = int(f,'x');
+        syms x
+        x = 1:10;
+        guess = eval(doub_integral_answer);
+        actual = eval(doub_integral);
+            if guess == actual
+                set(hObject,'BackgroundColor','green');
+                [s,fs] = audioread('app.wav');
+                sound(s,fs)
+            else
+                set(hObject,'BackgroundColor','red');
+                [s,fs] = audioread('buzz.wav');
+                sound(s,fs)
+            end
+end
 
 % --- Executes during object creation, after setting all properties.
 function edit3_CreateFcn(hObject, eventdata, handles)
@@ -254,6 +289,8 @@ function popupmenu3_Callback(hObject, eventdata, handles)
 choice = get(handles.popupmenu3,'Value');  
 switch choice
 	case 1   % User Picked First Item on Menu
+        set(handles.edit3,'BackgroundColor','white');
+        set(handles.edit4,'BackgroundColor','white');
         set(handles.text4, 'String', 'Function');
         set(handles.text5, 'String', 'First Derivative');
         set(handles.text6, 'String', 'Second Derivative');
@@ -273,6 +310,8 @@ switch choice
         axes(handles.axes2); cla;
         axes(handles.axes3); cla;
 	case 2	% User Picked 2nd Item on Menu
+        set(handles.edit3,'BackgroundColor','white');
+        set(handles.edit4,'BackgroundColor','white');
         set(handles.text4, 'String', 'Function');
         set(handles.text5, 'String', 'First Anti-Derivative');
         set(handles.text6, 'String', 'Second Anti-Derivative');
@@ -495,6 +534,8 @@ function pushbutton3_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton3 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+set(handles.edit3,'BackgroundColor','white');
+set(handles.edit4,'BackgroundColor','white');
 set(handles.edit1, 'String', '');
 set(handles.edit3, 'String', '');
 set(handles.edit4, 'String', '');
