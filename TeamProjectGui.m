@@ -407,8 +407,12 @@ switch choice
         actual = eval(der);
             if guess == actual
                 set(hObject,'BackgroundColor','green');
+                [s,fs] = audioread('app.wav');
+                sound(s,fs)
             else
                 set(hObject,'BackgroundColor','red');
+                [s,fs] = audioread('buzz.wav');
+                sound(s,fs)
             end
 	case 2	% User Picked 2nd Item on Menu
         integral_answer = str2sym(get(handles.edit4,'String'));  
@@ -419,8 +423,12 @@ switch choice
         actual = eval(integral);
             if guess == actual
                 set(hObject,'BackgroundColor','green');
+                [s,fs] = audioread('app.wav');
+                sound(s,fs)
             else
                 set(hObject,'BackgroundColor','red');
+                [s,fs] = audioread('buzz.wav');
+                sound(s,fs)
             end
 end
 
