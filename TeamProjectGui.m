@@ -27,7 +27,7 @@ function varargout = TeamProjectGui(varargin)
 
 % Edit the above text to modify the response to help TeamProjectGui
 
-% Last Modified by GUIDE v2.5 04-Dec-2018 16:20:08
+% Last Modified by GUIDE v2.5 05-Dec-2018 19:28:48
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -572,3 +572,26 @@ function listbox1_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in pushbutton4.
+function pushbutton4_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+instructions = msgbox({'The use of this program is to learn and practice integrals and derivatives. This is accomplished by entering a function and typing in answers to see if you"re right. Below are specific instructions. Enjoy.'; 
+                       '';
+                       '1. Use the dropdown menu to select between Derivatives and Integrals';
+                       '2. Enter the function in terms of x using +, -, *,  /, and ^';
+                       '3. Press the "Enter" key';
+                       '4. Enter your answers in the boxes';
+                       '5. Press "Enter"';
+                       '6. If right, the box will turn green. If not, it will turn red.';
+                       '7. Use the "Show Answer" and "Show Graph" buttons to see the solutions';
+                       '8. Use the "Reset All" button to clear all values and start over'
+                       '';
+                       'Example Functions:';
+                       'cos(x), sin(x), 2*x, x^2+8*x-4';
+                       '';
+                       'Functions That Don"t Work:';
+                       '2x, 9sin(x), sin(9x)'});
