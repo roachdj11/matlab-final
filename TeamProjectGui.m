@@ -579,7 +579,7 @@ function pushbutton4_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton4 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-instructions = msgbox({'The use of this program is to learn and practice integrals and derivatives. This is accomplished by entering a function and typing in answers to see if you"re right. Below are specific instructions. Enjoy.'; 
+instructions = msgbox({'The use of this program is to learn and practice integrals and derivatives. This is accomplished by entering a function and typing in answers to see if you''re right. Below are specific instructions. Enjoy.'; 
                        '';
                        '1. Use the dropdown menu to select between Derivatives and Integrals';
                        '2. Enter the function in terms of x using +, -, *,  /, and ^';
@@ -593,5 +593,5 @@ instructions = msgbox({'The use of this program is to learn and practice integra
                        'Example Functions:';
                        'cos(x), sin(x), 2*x, x^2+8*x-4';
                        '';
-                       'Functions That Don"t Work:';
+                       'Functions That Don''t Work:';
                        '2x, 9sin(x), sin(9x)'});
