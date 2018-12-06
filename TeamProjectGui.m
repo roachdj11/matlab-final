@@ -594,4 +594,4 @@ instructions = msgbox({'The use of this program is to learn and practice integra
                        'cos(x), sin(x), 2*x, x^2+8*x-4';
                        '';
                        'Functions That Don''t Work:';
-                       '2x, 9sin(x), sin(9x)'});
+                       '2x, 9sin(x), sin(9x)'},'Instructions');
